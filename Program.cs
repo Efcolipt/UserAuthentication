@@ -21,3 +21,4 @@ namespace Lab11
         }
     }
 }
+//https://docs.google.com/document/d/1VlCBXLEuqGG3nXQ6MeoCgjykd0rVAFFNki3VfQ-dJ_g/edit?usp=sharing
