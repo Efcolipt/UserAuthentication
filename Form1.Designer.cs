@@ -48,6 +48,7 @@ namespace Lab11
             // 
             // login
             // 
+            this.login.BackColor = System.Drawing.SystemColors.ControlDark;
             this.login.Location = new System.Drawing.Point(3, 3);
             this.login.Name = "login";
             this.login.PlaceholderText = "Логин";
@@ -56,6 +57,7 @@ namespace Lab11
             // 
             // pass
             // 
+            this.pass.BackColor = System.Drawing.SystemColors.ControlDark;
             this.pass.Location = new System.Drawing.Point(3, 32);
             this.pass.Name = "pass";
             this.pass.PlaceholderText = "Пароль";
@@ -76,6 +78,7 @@ namespace Lab11
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.flowLayoutPanel1);
             this.MaximizeBox = false;
@@ -85,6 +88,8 @@ namespace Lab11
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Вход";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();

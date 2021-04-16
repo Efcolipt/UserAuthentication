@@ -18,6 +18,17 @@ namespace Lab11
         public Form1()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.TopMost = true;
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+
+            if (keyData == (Keys.Alt | Keys.Tab))
+                return true; 
+
+            return base.ProcessCmdKey(ref msg, keyData);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -44,7 +55,7 @@ namespace Lab11
                         if (loging == "0")
                         {
                             System.Diagnostics.Process.Start("explorer", "C:\\");
-                            this.Close();
+                            Environment.Exit(0);
                         }
                     }
                     else logged.SetValue("loging", "1");
@@ -65,7 +76,7 @@ namespace Lab11
                 s.SetValue("loging", "0");
                 System.Diagnostics.Process.Start("explorer", "C:\\");
                 s.Close();
-                this.Close();
+                Environment.Exit(0);
             }
             catch (Exception exc)
             {
@@ -98,6 +109,11 @@ namespace Lab11
 
              return true;
          }
-        
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+
+        }
     }
 }
