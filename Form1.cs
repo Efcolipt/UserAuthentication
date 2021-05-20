@@ -37,7 +37,6 @@ namespace Lab11
 
             try
             {
-
                 RegistryKey logged = Registry.CurrentUser.OpenSubKey("logged",true);
                 if (logged == null){
                     try {
@@ -113,6 +112,11 @@ namespace Lab11
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = true;
+
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

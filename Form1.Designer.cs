@@ -29,58 +29,69 @@ namespace Lab11
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.login = new System.Windows.Forms.TextBox();
             this.pass = new System.Windows.Forms.TextBox();
             this.logining = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.login);
-            this.flowLayoutPanel1.Controls.Add(this.pass);
-            this.flowLayoutPanel1.Controls.Add(this.logining);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(181, 155);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(417, 104);
-            this.flowLayoutPanel1.TabIndex = 0;
             // 
             // login
             // 
-            this.login.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.login.Location = new System.Drawing.Point(3, 3);
+            this.login.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.login.BackColor = System.Drawing.SystemColors.Control;
+            this.login.Location = new System.Drawing.Point(301, 230);
             this.login.Name = "login";
             this.login.PlaceholderText = "Логин";
-            this.login.Size = new System.Drawing.Size(408, 23);
+            this.login.Size = new System.Drawing.Size(213, 23);
             this.login.TabIndex = 3;
             // 
             // pass
             // 
-            this.pass.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pass.Location = new System.Drawing.Point(3, 32);
+            this.pass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.pass.BackColor = System.Drawing.SystemColors.Control;
+            this.pass.Location = new System.Drawing.Point(301, 259);
             this.pass.Name = "pass";
             this.pass.PlaceholderText = "Пароль";
-            this.pass.Size = new System.Drawing.Size(408, 23);
+            this.pass.Size = new System.Drawing.Size(213, 23);
             this.pass.TabIndex = 2;
             // 
             // logining
             // 
-            this.logining.Location = new System.Drawing.Point(3, 61);
+            this.logining.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.logining.Location = new System.Drawing.Point(301, 288);
             this.logining.Name = "logining";
-            this.logining.Size = new System.Drawing.Size(408, 36);
+            this.logining.Size = new System.Drawing.Size(213, 36);
             this.logining.TabIndex = 1;
             this.logining.Text = "Войти";
             this.logining.UseVisualStyleBackColor = true;
             this.logining.Click += new System.EventHandler(this.logining_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Location = new System.Drawing.Point(343, 78);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(132, 132);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.logining);
+            this.Controls.Add(this.pass);
+            this.Controls.Add(this.login);
+            this.Controls.Add(this.pictureBox1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
@@ -91,18 +102,17 @@ namespace Lab11
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.TextBox login;
         private System.Windows.Forms.TextBox pass;
         private System.Windows.Forms.Button logining;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
